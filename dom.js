@@ -1,9 +1,12 @@
+
 function saveData(){
 
-  var name = document.getElementById('name');
-  
-  var email = document.getElementById('email');
+  var myobj = {
+   name : document.getElementById('name').value,
+   email : document.getElementById('email').value
+  }
 
-  localStorage.setItem("Name", name.value);
-  localStorage.setItem("Email", email.value);
+  localStorage.setItem("myObj", JSON.stringify(myobj));
+  
+console.log(myobj);
 }
